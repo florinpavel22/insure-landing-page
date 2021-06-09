@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Karla", sans-serif;
+}
+
+@media screen and (max-width: 310px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+.container {
+  max-width: 125rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.header {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo {
+  cursor: pointer;
+}
+
+.header .menu-desktop {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .header .menu-desktop {
+    display: none;
+  }
+}
+
+.header .menu-desktop li {
+  cursor: pointer;
+  color: #919191;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.header .menu-desktop li:hover {
+  color: #000;
+}
+
+.header .menu-desktop li:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.header .menu-mobile {
+  display: none;
+}
+
+.header .menu-mobile .menu-hidden {
+  display: none;
+}
+
+.header .menu-mobile ul {
+  position: absolute;
+  top: 9.6rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  color: #f9f9f9;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+  list-style-type: none;
+}
+
+.header .menu-mobile ul li {
+  text-transform: uppercase;
+}
+
+.header .menu-mobile ul li:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.header .menu-mobile ul li:last-child {
+  width: 85%;
+}
+
+.header .menu-mobile ul .btn {
+  display: block;
+  color: inherit;
+  border-color: inherit;
+  text-align: center;
+  -webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.header .menu-mobile ul .btn:hover {
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  .header .menu-mobile {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.header .btn {
+  text-decoration: none;
+  color: #000;
+  padding: 0.8rem 1.9rem;
+  border: 0.1rem solid #000;
+  -webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.header .btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.intro-section {
+  background-color: #2d2640;
+  color: #f9f9f9;
+  background-image: url("../../img/bg-pattern-intro-left-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.intro-section .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 965px) {
+  .intro-section .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.intro-section .intro-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 3rem;
+}
+
+@media screen and (max-width: 965px) {
+  .intro-section .intro-text {
+    padding: 9rem 0;
+    text-align: center;
+  }
+}
+
+.intro-section .intro-text h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 5.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 550px) {
+  .intro-section .intro-text h1 {
+    font-size: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .intro-section .intro-text h1 {
+    font-size: 4.1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .intro-section .intro-text h1 {
+    font-size: 3.6rem;
+  }
+}
+
+.intro-section .intro-text p {
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+.intro-section .intro-hero {
+  position: relative;
+  top: 10rem;
+}
+
+@media screen and (max-width: 1177px) {
+  .intro-section .intro-hero {
+    top: 5rem;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .intro-section .intro-hero {
+    top: 0;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1177px) {
+  .intro-section .intro-hero img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .intro-section .intro-hero img {
+    width: 100%;
+  }
+}
+
+.intro-section .btn {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  border: 0.1rem solid #f9f9f9;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.intro-section .btn:hover {
+  background-color: #f9f9f9;
+  color: #2d2640;
+}
+
+.middle-section {
+  padding: 10rem 0 8.5rem 0;
+}
+
+@media screen and (max-width: 965px) {
+  .middle-section {
+    text-align: center;
+  }
+}
+
+.middle-section h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 5.3rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+  .middle-section h2 {
+    font-size: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .middle-section h2 {
+    font-size: 4.1rem;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .middle-section h2 {
+    font-size: 3.6rem;
+  }
+}
+
+.middle-section .were-different {
+  margin-bottom: 8.5rem;
+}
+
+.middle-section .were-different h2 {
+  margin-bottom: 5rem;
+}
+
+.middle-section .were-different .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(26rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-gap: 4.5rem;
+}
+
+@media screen and (max-width: 310px) {
+  .middle-section .were-different .cards {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .middle-section .were-different .card:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.middle-section .were-different .card h5 {
+  font-size: 2.2rem;
+  margin: 2rem 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+.middle-section .were-different .card p {
+  line-height: 1.5;
+}
+
+.middle-section .find-out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2d2640;
+  color: #f9f9f9;
+  padding: 4rem 6rem;
+  background-image: url("../../img/bg-pattern-how-we-work-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+@media screen and (max-width: 967px) {
+  .middle-section .find-out {
+    display: block;
+    text-align: center;
+    padding: 4.5rem 5rem;
+  }
+}
+
+.middle-section .find-out h2 {
+  max-width: 55rem;
+}
+
+@media screen and (max-width: 967px) {
+  .middle-section .find-out h2 {
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.middle-section .find-out a {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #f9f9f9;
+  color: inherit;
+  font-weight: 500;
+  -webkit-transition: background 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+.middle-section .find-out a:hover {
+  background-color: #f9f9f9;
+  color: #2d2640;
+}
+
+footer {
+  padding: 5rem 0;
+  background-color: #f9f9f9;
+  background-image: url("../../img/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+footer hr {
+  height: 0.1rem;
+  border: none;
+  background-color: #ddd;
+}
+
+footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .socials .logo {
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 620px) {
+  footer .socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+footer .socials .logos {
+  padding-bottom: 3rem;
+}
+
+footer .socials .logos img {
+  cursor: pointer;
+}
+
+footer .socials .logos img:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 4.5rem;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width: 310px) {
+  footer .links {
+    display: block;
+  }
+}
+
+footer .links ul {
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 310px) {
+  footer .links ul:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  footer .links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+footer .links ul li {
+  font-weight: 600;
+  line-height: 2;
+}
+
+footer .links ul li:not(:first-child) {
+  cursor: pointer;
+}
+
+footer .links ul li:not(:first-child):hover {
+  text-decoration: underline;
+}
+
+footer .links .desc-link {
+  color: #919191;
+  margin-bottom: 2.5rem;
+}
+/*# sourceMappingURL=main.css.map */

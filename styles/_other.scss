@@ -1,0 +1,20 @@
+$dark-violet: hsl(256, 26%, 20%);
+$gray-blue: hsl(216, 30%, 68%);
+
+$heading-font: 'DM Serif Display', serif;
+$body-font: 'Karla', sans-serif;
+
+$timer: 200ms;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Media query max width
+@mixin mediaQueryMax($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
